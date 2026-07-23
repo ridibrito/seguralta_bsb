@@ -70,12 +70,12 @@ header.scrolled {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 76px;
+  height: 72px;
   padding: 0 16px;
 }
 
 .logo img {
-  height: 44px;
+  height: 40px;
   width: auto;
   display: block;
 }
@@ -109,13 +109,14 @@ header.scrolled {
   background-color: var(--primary);
   color: #FFFFFF !important;
   font-weight: 700;
-  padding: 10px 22px;
+  padding: 9px 18px;
   border-radius: var(--radius-sm);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  white-space: nowrap;
   transition: all 0.25s ease;
   box-shadow: 0 4px 14px rgba(255, 122, 0, 0.35);
 }
@@ -889,7 +890,7 @@ footer {
   gap: 16px;
 }
 
-/* Responsiveness */
+/* Responsiveness Improvements */
 @media (max-width: 1024px) {
   .hero-cards-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -899,15 +900,39 @@ footer {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+  header {
+    top: 8px;
+    left: 8px;
+    right: 8px;
+  }
+  .header-inner {
+    height: 62px;
+    padding: 0 10px;
+  }
+  .logo img {
+    height: 32px;
+  }
   .nav-links {
     display: none;
   }
   .mobile-menu-btn {
     display: block;
   }
+  .btn-whatsapp-header {
+    padding: 7px 12px;
+    font-size: 0.82rem;
+    gap: 6px;
+  }
+  .btn-whatsapp-header svg {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@media (max-width: 640px) {
   .hero {
-    padding: 130px 0 60px;
+    padding: 120px 0 50px;
   }
   .hero-cards-grid {
     grid-template-columns: 1fr;
@@ -920,5 +945,20 @@ footer {
   }
   .cta-banner h2 {
     font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-inner {
+    height: 56px;
+    padding: 0 8px;
+  }
+  .logo img {
+    height: 28px;
+  }
+  .btn-whatsapp-header {
+    padding: 6px 10px;
+    font-size: 0.78rem;
+    border-radius: 6px;
   }
 }
